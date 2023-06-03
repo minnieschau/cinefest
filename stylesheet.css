@@ -14,27 +14,27 @@
 @font-face {
     font-family: 'TT Commons';
     font-weight: 500;
-    src: url('/fonts/TTCommons-Medium.woff') format('woff');
+    src: url('fonts/TTCommons-Medium.woff') format('woff');
 }
 
 @font-face {
     font-family: 'TT Commons';
     font-weight: 500;
     font-style: italic;
-    src: url('/fonts/TTCommons-MediumItalic.woff') format('woff');
+    src: url('fonts/TTCommons-MediumItalic.woff') format('woff');
 }
 
 @font-face {
     font-family: 'TT Commons';
     font-weight: 600;
-    src: url('/fonts/TTCommons-DemiBold.woff') format('woff');
+    src: url('fonts/TTCommons-DemiBold.woff') format('woff');
 }
 
 @font-face {
     font-family: 'TT Commons';
     font-weight: 600;
     font-style: italic;
-    src: url('/fonts/TTCommons-DemiBoldItalic.woff') format('woff');
+    src: url('fonts/TTCommons-DemiBoldItalic.woff') format('woff');
 }
 
 :root {
@@ -50,7 +50,6 @@
     padding: 0;
     font-family: 'TT Commons', sans-serif;
     line-height: 1.5;
-    font-weight: 400;
     letter-spacing: 0.5px;
     box-sizing: border-box;
 }
