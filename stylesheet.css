@@ -1,9 +1,48 @@
+@font-face {
+    font-family: 'TT Commons';
+    font-weight: 400;
+    src: url('/fonts/TTCommons-Regular.otf') format('opentype'),
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    font-weight: 400;
+    font-style: italic;
+    src: url('/fonts/TTCommons-Italitc.otf') format('opentype'),
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    font-weight: 500;
+    src: url('/fonts/TTCommons-Medium.otf') format('opentype'),
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    font-weight: 500;
+    font-style: italic;
+    src: url('/fonts/TTCommons-MediumItalic.otf') format('opentype'),
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    font-weight: 600;
+    src: url('/fonts/TTCommons-DemiBold.otf') format('opentype'),
+}
+
+@font-face {
+    font-family: 'TT Commons';
+    font-weight: 600;
+    font-style: italic;
+    src: url('/fonts/TTCommons-DemiBoldItalic.otf') format('opentype'),
+}
+
 :root {
     --fs-700: 3rem;
     --fs-600: 2rem;
     --fs-500: 1.25rem;
     --fs-400: 1rem;
-    --yellow: rgb(255, 223, 40);
+    --yellow: #FFDF28;
 }
 
 * {
@@ -24,12 +63,20 @@ h2 {
     font-size: var(--fs-600);
 }
 
+h3 {
+    font-weight: 500;
+}
+
 h3, .h3-like {
     font-size: var(--fs-500);
 }
 
 p {
     font-size: var(--fs-400);
+}
+
+strong {
+    font-weight: 600;
 }
 
 body {
@@ -94,7 +141,6 @@ header nav a, footer a {
     padding: 0.4rem 1rem;
     text-align: center;
     background-color: black;
-    transition: 0.5s ease;
 }
 
 .header__nav-menu li:hover {
@@ -172,8 +218,9 @@ section h2 {
     outline: black 2px solid;
     background: transparent;
     box-sizing: border-box;
-    z-index: 2;
+    z-index: -1;
 }
+
 
 /* Swiper */ 
 .swiper {
@@ -184,7 +231,11 @@ section h2 {
 
 .swiper-nav {
     margin-left: auto;
+    display: flex;
+    gap: 1rem;
 }
+
+
 
 .swiper-btn-prev, 
 .swiper-btn-next {
@@ -230,13 +281,12 @@ section h2 {
 
 .movie-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(5, 1fr); 
     row-gap: 4rem;
     column-gap: 3rem;
 }
 
 .movie-grid .movie-card {
-    max-height: 100%;
     display: grid;
     grid-template-rows: min-content;
 }
@@ -251,17 +301,6 @@ section h2 {
     background-color: var(--yellow);
 }
 
-.privacy {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    justify-content: center;
-}
-
-.privacy .ph-fill {
-    font-size: 1rem;
-}
-
 .offset-left {
     margin-left: 4rem;
 }
@@ -274,6 +313,18 @@ section h2 {
     width: 250px;
     height: 275px;
     object-fit: cover;
+}
+
+.private, .edit {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+}
+
+.private {
+    justify-content: center;
+    align-items: center;
 }
 
 .for-titles {
@@ -304,11 +355,91 @@ footer h3, footer p {
 
 #footer__connect {
     display: grid;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 #footer__help, #footer__about {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+#footer__socials {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 2rem;
+}
+
+#footer__socials div {
+    width: 36px;
+    height: 36px;
+    background-color: var(--yellow);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer__socials img, 
+.private img, 
+.edit img {
+    width: 20px;
+    height: 20px;
+}
+
+.swiper-nav img {
+    width: 24px;
+}
+
+/* expand to right, shrink to left */ 
+.underline--visible {
+    display: inline-block !important;
+    background-image: linear-gradient(var(--yellow) 0%, var(--yellow) 100%);
+    background-size: 100% 3px;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    transition: background-size 0.45s ease;
+}
+
+.underline--visible.animate:hover {
+    background-size: 0% 3px;
+}
+
+.underline--hidden {
+    display: inline-block !important;
+    padding-bottom: 2px;
+    background-image: linear-gradient(var(--yellow) 0%, var(--yellow) 100%);
+    background-size: 0% 3px;
+    background-repeat: no-repeat; 
+    background-position: center bottom;
+    transition: all 0.45s;
+}
+  
+.underline--hidden:hover {
+    background-size: 100% 3px; 
+}
+
+.profile__section {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.profile__bio {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.profile__img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+}
+
+.profile__about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 2rem;
 }
