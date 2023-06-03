@@ -1,40 +1,46 @@
 @font-face {
     font-family: 'TT Commons';
     font-weight: 400;
-    src: url('/fonts/TTCommons-Regular.otf') format('opentype');
+    src: url('/fonts/TTCommons-Regular.otf') format('opentype'),
+         url('fonts/TTCommons-Regular.woff');
 }
 
 @font-face {
     font-family: 'TT Commons';
     font-weight: 400;
     font-style: italic;
-    src: url('/fonts/TTCommons-Italitc.otf') format('opentype');
+    src: url('/fonts/TTCommons-Italitc.otf') format('opentype'),
+         url('fonts/TTCommons-Italic.woff');
 }
 
 @font-face {
     font-family: 'TT Commons';
     font-weight: 500;
-    src: url('/fonts/TTCommons-Medium.otf') format('opentype');
+    src: url('/fonts/TTCommons-Medium.otf') format('opentype'),
+         url('/fonts/TTCommons-Medium.woff');
 }
 
 @font-face {
     font-family: 'TT Commons';
     font-weight: 500;
     font-style: italic;
-    src: url('/fonts/TTCommons-MediumItalic.otf') format('opentype');
+    src: url('/fonts/TTCommons-MediumItalic.otf') format('opentype'),
+         url('/fonts/TTCommons-MediumItalic.woff');
 }
 
 @font-face {
     font-family: 'TT Commons';
     font-weight: 600;
-    src: url('/fonts/TTCommons-DemiBold.otf') format('opentype');
+    src: url('/fonts/TTCommons-DemiBold.otf') format('opentype'),
+         url('/fonts/TTCommons-DemiBold.woff');
 }
 
 @font-face {
     font-family: 'TT Commons';
     font-weight: 600;
     font-style: italic;
-    src: url('/fonts/TTCommons-DemiBoldItalic.otf') format('opentype');
+    src: url('/fonts/TTCommons-DemiBoldItalic.otf') format('opentype'),
+         url('/fonts/TTCommons-DemiBoldItalic.woff');
 }
 
 :root {
